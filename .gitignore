@@ -1,0 +1,47 @@
+# ---------------------------------------------------------------------------
+# SDSC 6018 Group 12 — HAM10000 skin lesion project
+# ---------------------------------------------------------------------------
+
+# ---- Data (NOT committed: download following README "Data setup") ----------
+dataverse_files/HAM10000_images_part_1/
+dataverse_files/HAM10000_images_part_2/
+dataverse_files/*_images_part_*/
+dataverse_files/*.zip
+dataverse_files/HAM10000_segmentations_lesion_tschandl/
+dataverse_files/HAM10000_metadata.xlsx
+data/
+*.jpg
+*.jpeg
+
+# ---- Course handouts (instructor material, not our own work) --------------
+小组计划书/SDSC 6018-final-draft.pdf
+小组计划书/6018 Rubric-Proposal.pdf
+
+# ---- Python ---------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+.python-version
+
+# ---- Training artefacts ---------------------------------------------------
+checkpoints/
+runs/
+outputs/
+predictions/
+wandb/
+lightning_logs/
+*.pt
+*.pth
+*.ckpt
+*.onnx
+
+# ---- OS / editor ----------------------------------------------------------
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
