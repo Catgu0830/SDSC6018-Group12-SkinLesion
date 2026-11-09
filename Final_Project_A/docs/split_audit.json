@@ -1,0 +1,85 @@
+{
+  "generated_at": "2026-11-09T18:50:47.146300+08:00",
+  "checks": {
+    "every_original_image_assigned_once": true,
+    "all_original_fields_preserved": true,
+    "all_lesions_assigned_once": true,
+    "all_splits_contain_seven_classes": true,
+    "no_exact_byte_duplicates_cross_splits": true,
+    "lesion_counts_match_targets": true,
+    "no_train_val_lesion_overlap": true,
+    "no_train_val_image_overlap": true,
+    "no_train_test_lesion_overlap": true,
+    "no_train_test_image_overlap": true,
+    "no_val_test_lesion_overlap": true,
+    "no_val_test_image_overlap": true
+  },
+  "image_counts": {
+    "train": 7050,
+    "val": 1474,
+    "test": 1491
+  },
+  "lesion_counts": {
+    "train": 5229,
+    "val": 1121,
+    "test": 1120
+  },
+  "class_image_counts": {
+    "train": {
+      "bkl": 762,
+      "df": 86,
+      "mel": 788,
+      "vasc": 95,
+      "bcc": 365,
+      "nv": 4724,
+      "akiec": 230
+    },
+    "val": {
+      "bkl": 178,
+      "df": 14,
+      "nv": 968,
+      "mel": 156,
+      "vasc": 28,
+      "bcc": 79,
+      "akiec": 51
+    },
+    "test": {
+      "bkl": 159,
+      "nv": 1013,
+      "df": 15,
+      "mel": 169,
+      "vasc": 19,
+      "bcc": 70,
+      "akiec": 46
+    }
+  },
+  "class_lesion_counts": {
+    "train": {
+      "nv": 3782,
+      "akiec": 160,
+      "mel": 430,
+      "bcc": 229,
+      "df": 51,
+      "bkl": 509,
+      "vasc": 68
+    },
+    "val": {
+      "df": 11,
+      "nv": 811,
+      "mel": 92,
+      "bkl": 109,
+      "bcc": 49,
+      "vasc": 15,
+      "akiec": 34
+    },
+    "test": {
+      "bkl": 109,
+      "mel": 92,
+      "nv": 810,
+      "bcc": 49,
+      "akiec": 34,
+      "df": 11,
+      "vasc": 15
+    }
+  }
+}

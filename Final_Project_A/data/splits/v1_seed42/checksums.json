@@ -1,0 +1,9 @@
+{
+  "combined.csv": "f5229c16d383ab5757b764f99228a9184dbeb631cfcecfcf40cb1e75af10173d",
+  "label_mapping.json": "331c1e70295a1c7bb928a1c5256ed5d97677bb8f1ed4683b4d1ea3f5b3ff22d5",
+  "lesions.csv": "e47ba99ac3ce5dcfb892ca4e453b2b3302f34c1903a00ae0344e4fb6dc42504e",
+  "split_config.json": "daf80838982bedf8389a963cc8f4a7fdadfb7ebebbeb0d1d8c4b20618622139a",
+  "test.csv": "744cfce3f81cec73c48f00a78ef21b074620dffd050fa5819877196ef271a9ce",
+  "train.csv": "03ca7d47da7151540561be4563dcdfa82760235e3e67c92776bcda0d0527b392",
+  "val.csv": "e012c1fe3bc9ebd6b48bfb29c6de204fde052e0522cd0eb5397b0ff786a3e6f4"
+}

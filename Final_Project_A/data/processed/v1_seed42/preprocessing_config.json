@@ -1,0 +1,151 @@
+{
+  "schema_version": "ham10000-preprocessing-v1",
+  "split_version": "v1_seed42",
+  "team_alignment_status": "A first proposal; confirm image weights and recipe with B",
+  "metadata": {
+    "fit_split": "train",
+    "fit_n_rows": 7050,
+    "fit_image_ids_sha256": "5ef3c03e5cb16920bfedbb7376e09e5a95fc11c95a12a3ed528ce167514e06bc",
+    "fit_unit": "image record; lesions with multiple images contribute multiple rows",
+    "age": {
+      "imputation": "observed training median",
+      "median": 50.0,
+      "mean_after_imputation": 51.754609929078015,
+      "population_std_after_imputation": 16.914031588126964,
+      "observed_n": 7010,
+      "missing_n": 40,
+      "age_missing_is_model_feature": false
+    },
+    "vocabulary": {
+      "sex": [
+        "female",
+        "male",
+        "unknown"
+      ],
+      "localization": [
+        "abdomen",
+        "acral",
+        "back",
+        "chest",
+        "ear",
+        "face",
+        "foot",
+        "genital",
+        "hand",
+        "lower extremity",
+        "neck",
+        "scalp",
+        "trunk",
+        "unknown",
+        "upper extremity"
+      ]
+    },
+    "unknown_category_policy": "blank or unseen maps to reserved unknown",
+    "feature_order": [
+      "age_z",
+      "sex__female",
+      "sex__male",
+      "sex__unknown",
+      "localization__abdomen",
+      "localization__acral",
+      "localization__back",
+      "localization__chest",
+      "localization__ear",
+      "localization__face",
+      "localization__foot",
+      "localization__genital",
+      "localization__hand",
+      "localization__lower_extremity",
+      "localization__neck",
+      "localization__scalp",
+      "localization__trunk",
+      "localization__unknown",
+      "localization__upper_extremity"
+    ],
+    "feature_modes": {
+      "all_metadata": [
+        "age_z",
+        "sex__female",
+        "sex__male",
+        "sex__unknown",
+        "localization__abdomen",
+        "localization__acral",
+        "localization__back",
+        "localization__chest",
+        "localization__ear",
+        "localization__face",
+        "localization__foot",
+        "localization__genital",
+        "localization__hand",
+        "localization__lower_extremity",
+        "localization__neck",
+        "localization__scalp",
+        "localization__trunk",
+        "localization__unknown",
+        "localization__upper_extremity"
+      ],
+      "age_only": [
+        "age_z"
+      ],
+      "localization_only": [
+        "localization__abdomen",
+        "localization__acral",
+        "localization__back",
+        "localization__chest",
+        "localization__ear",
+        "localization__face",
+        "localization__foot",
+        "localization__genital",
+        "localization__hand",
+        "localization__lower_extremity",
+        "localization__neck",
+        "localization__scalp",
+        "localization__trunk",
+        "localization__unknown",
+        "localization__upper_extremity"
+      ],
+      "image_only": []
+    }
+  },
+  "image": {
+    "suggested_weights": "ResNet50_Weights.IMAGENET1K_V2",
+    "weights_status": "A first proposal; confirm with B before training",
+    "source_url": "https://docs.pytorch.org/vision/stable/models/generated/torchvision.models.resnet50.html",
+    "resize_shorter_edge": 232,
+    "crop_size": 224,
+    "interpolation": "Pillow BILINEAR",
+    "rgb_mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "rgb_std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "normalization_source": "fixed pretrained ImageNet constants; not estimated from HAM10000",
+    "output_dtype": "float32",
+    "output_layout": "CHW",
+    "train_augmentation": {
+      "horizontal_flip_probability": 0.5,
+      "rotation_degrees": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "key": "SHA256(ham10000-image-augmentation-v1|run_seed|epoch|image_id)"
+    },
+    "evaluation_augmentation": "none; epoch and seed do not affect val/test",
+    "crop_limitations": "Center crop may remove peripheral lesion content; review train previews with B"
+  },
+  "source_sha256": {
+    "train.csv": "03ca7d47da7151540561be4563dcdfa82760235e3e67c92776bcda0d0527b392",
+    "val.csv": "e012c1fe3bc9ebd6b48bfb29c6de204fde052e0522cd0eb5397b0ff786a3e6f4",
+    "test.csv": "744cfce3f81cec73c48f00a78ef21b074620dffd050fa5819877196ef271a9ce",
+    "split_checksums.json": "387dd5b540ba80674063f14648a4cf30dd5022688b77a6acf9dc49fab2206741",
+    "preprocessing.py": "d552d49fb44ecbabde48a7a2c0190b7cb5b820bf1af89a41777613334c164d97",
+    "preprocess_data.py": "7ffcb8843c989764af30d4e85ca199e642bf7f0788e05e0c02c0e596febdcad0"
+  }
+}

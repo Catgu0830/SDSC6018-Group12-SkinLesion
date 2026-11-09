@@ -1,0 +1,286 @@
+{
+  "generated_at": "2026-11-09T18:50:33.517400+08:00",
+  "input": "data/raw/HAM10000_metadata.csv",
+  "input_md5": "8f85fb1aa29d80a2797247e434deb79d",
+  "scope": "Metadata only; raw records are unchanged. Images and image integrity are not checked.",
+  "fields": [
+    "lesion_id",
+    "image_id",
+    "dx",
+    "dx_type",
+    "age",
+    "sex",
+    "localization",
+    "dataset"
+  ],
+  "n_records": 10015,
+  "n_unique_images": 10015,
+  "n_unique_lesions": 7470,
+  "checks": {
+    "original_checksum_matches_official": true,
+    "csv_tab_records_identical": true,
+    "expected_10015_records": true,
+    "no_duplicate_image_ids": true,
+    "no_missing_image_or_lesion_ids": true,
+    "expected_seven_labels": true,
+    "consistent_diagnosis_per_lesion": true,
+    "age_numeric_and_in_0_to_120_when_present": true
+  },
+  "empty_by_field": {
+    "lesion_id": 0,
+    "image_id": 0,
+    "dx": 0,
+    "dx_type": 0,
+    "age": 57,
+    "sex": 0,
+    "localization": 0,
+    "dataset": 0
+  },
+  "unknown_by_field": {
+    "lesion_id": 0,
+    "image_id": 0,
+    "dx": 0,
+    "dx_type": 0,
+    "age": 0,
+    "sex": 57,
+    "localization": 234,
+    "dataset": 0
+  },
+  "duplicate_image_ids": {},
+  "class_images": {
+    "nv": 6705,
+    "mel": 1113,
+    "bkl": 1099,
+    "bcc": 514,
+    "akiec": 327,
+    "vasc": 142,
+    "df": 115
+  },
+  "class_lesions": {
+    "nv": 5403,
+    "bkl": 727,
+    "mel": 614,
+    "bcc": 327,
+    "akiec": 228,
+    "vasc": 98,
+    "df": 73
+  },
+  "sex": {
+    "male": 5406,
+    "female": 4552,
+    "unknown": 57
+  },
+  "localization": {
+    "back": 2192,
+    "lower extremity": 2077,
+    "trunk": 1404,
+    "upper extremity": 1118,
+    "abdomen": 1022,
+    "face": 745,
+    "chest": 407,
+    "foot": 319,
+    "unknown": 234,
+    "neck": 168,
+    "scalp": 128,
+    "hand": 90,
+    "ear": 56,
+    "genital": 48,
+    "acral": 7
+  },
+  "dx_type": {
+    "histo": 5340,
+    "follow_up": 3704,
+    "consensus": 902,
+    "confocal": 69
+  },
+  "dataset": {
+    "vidir_molemax": 3954,
+    "vidir_modern": 3363,
+    "rosendahl": 2259,
+    "vienna_dias": 439
+  },
+  "age_observed_min": 0.0,
+  "age_observed_max": 85.0,
+  "age_observed_distinct": [
+    0.0,
+    5.0,
+    10.0,
+    15.0,
+    20.0,
+    25.0,
+    30.0,
+    35.0,
+    40.0,
+    45.0,
+    50.0,
+    55.0,
+    60.0,
+    65.0,
+    70.0,
+    75.0,
+    80.0,
+    85.0
+  ],
+  "invalid_age_records": [],
+  "images_per_lesion": {
+    "1": 5514,
+    "2": 1423,
+    "3": 490,
+    "4": 34,
+    "5": 5,
+    "6": 4
+  },
+  "n_lesions_with_multiple_images": 1956,
+  "within_lesion_inconsistency_counts": {
+    "localization": 2,
+    "dataset": 9
+  },
+  "within_lesion_inconsistencies": [
+    {
+      "lesion_id": "HAM_0000871",
+      "field": "localization",
+      "values": [
+        "chest",
+        "trunk"
+      ],
+      "image_ids": [
+        "ISIC_0025964",
+        "ISIC_0030623",
+        "ISIC_0026506"
+      ]
+    },
+    {
+      "lesion_id": "HAM_0000871",
+      "field": "dataset",
+      "values": [
+        "vidir_modern",
+        "vidir_molemax"
+      ],
+      "image_ids": [
+        "ISIC_0025964",
+        "ISIC_0030623",
+        "ISIC_0026506"
+      ]
+    },
+    {
+      "lesion_id": "HAM_0000492",
+      "field": "dataset",
+      "values": [
+        "vidir_modern",
+        "vidir_molemax"
+      ],
+      "image_ids": [
+        "ISIC_0028445",
+        "ISIC_0027076",
+        "ISIC_0029859"
+      ]
+    },
+    {
+      "lesion_id": "HAM_0006453",
+      "field": "dataset",
+      "values": [
+        "vidir_modern",
+        "vidir_molemax"
+      ],
+      "image_ids": [
+        "ISIC_0029081",
+        "ISIC_0025744",
+        "ISIC_0030192"
+      ]
+    },
+    {
+      "lesion_id": "HAM_0003558",
+      "field": "dataset",
+      "values": [
+        "vidir_modern",
+        "vidir_molemax"
+      ],
+      "image_ids": [
+        "ISIC_0025303",
+        "ISIC_0030129",
+        "ISIC_0026989"
+      ]
+    },
+    {
+      "lesion_id": "HAM_0001726",
+      "field": "localization",
+      "values": [
+        "back",
+        "trunk"
+      ],
+      "image_ids": [
+        "ISIC_0029281",
+        "ISIC_0024367",
+        "ISIC_0024700"
+      ]
+    },
+    {
+      "lesion_id": "HAM_0001726",
+      "field": "dataset",
+      "values": [
+        "vidir_modern",
+        "vidir_molemax"
+      ],
+      "image_ids": [
+        "ISIC_0029281",
+        "ISIC_0024367",
+        "ISIC_0024700"
+      ]
+    },
+    {
+      "lesion_id": "HAM_0005481",
+      "field": "dataset",
+      "values": [
+        "vidir_modern",
+        "vidir_molemax"
+      ],
+      "image_ids": [
+        "ISIC_0029000",
+        "ISIC_0025955",
+        "ISIC_0030356"
+      ]
+    },
+    {
+      "lesion_id": "HAM_0002534",
+      "field": "dataset",
+      "values": [
+        "vidir_modern",
+        "vidir_molemax"
+      ],
+      "image_ids": [
+        "ISIC_0024898",
+        "ISIC_0029538",
+        "ISIC_0027620"
+      ]
+    },
+    {
+      "lesion_id": "HAM_0004979",
+      "field": "dataset",
+      "values": [
+        "vidir_modern",
+        "vidir_molemax"
+      ],
+      "image_ids": [
+        "ISIC_0026596",
+        "ISIC_0028056",
+        "ISIC_0032245"
+      ]
+    },
+    {
+      "lesion_id": "HAM_0003194",
+      "field": "dataset",
+      "values": [
+        "vidir_modern",
+        "vidir_molemax"
+      ],
+      "image_ids": [
+        "ISIC_0032019",
+        "ISIC_0026954"
+      ]
+    }
+  ],
+  "images_downloaded": false,
+  "image_integrity_checked": false,
+  "split_created": false,
+  "preprocessing_fitted": false
+}

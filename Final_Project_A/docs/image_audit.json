@@ -1,0 +1,68 @@
+{
+  "generated_at": "2026-11-09T18:50:48.746645+08:00",
+  "scope": "Official ZIPs, full CRC reads, full JPEG decoding, original-byte extraction and exact-file duplicate checks; no near-duplicate or patient-identity audit.",
+  "n_metadata_records": 10015,
+  "n_archive_images": 10015,
+  "n_decoded_images": 10015,
+  "n_extracted_jpg_files": 10015,
+  "archive_counts": {
+    "HAM10000_images_part_1.zip": 5000,
+    "HAM10000_images_part_2.zip": 5015
+  },
+  "dimension_counts": {
+    "600x450": 10015
+  },
+  "mode_counts": {
+    "RGB": 10015
+  },
+  "class_counts": {
+    "bkl": 1099,
+    "nv": 6705,
+    "df": 115,
+    "mel": 1113,
+    "vasc": 142,
+    "bcc": 514,
+    "akiec": 327
+  },
+  "n_unique_lesions": 7470,
+  "failures": [],
+  "missing_image_ids": [],
+  "extra_image_ids": [],
+  "exact_byte_duplicate_groups": [
+    [
+      {
+        "image_id": "ISIC_0029861",
+        "lesion_id": "HAM_0002300",
+        "dx": "nv"
+      },
+      {
+        "image_id": "ISIC_0024366",
+        "lesion_id": "HAM_0002300",
+        "dx": "nv"
+      }
+    ],
+    [
+      {
+        "image_id": "ISIC_0029938",
+        "lesion_id": "HAM_0001895",
+        "dx": "nv"
+      },
+      {
+        "image_id": "ISIC_0024777",
+        "lesion_id": "HAM_0001895",
+        "dx": "nv"
+      }
+    ]
+  ],
+  "cross_lesion_exact_byte_duplicate_groups": [],
+  "checks": {
+    "official_archive_sizes_and_md5_match": true,
+    "archive_image_ids_unique": true,
+    "metadata_archive_image_ids_match": true,
+    "all_images_pass_crc_and_full_decoding": true,
+    "extracted_image_ids_match_metadata": true,
+    "no_exact_byte_duplicates_across_lesions": true
+  },
+  "split_created": false,
+  "image_preprocessing_applied": false
+}

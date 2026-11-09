@@ -1,0 +1,82 @@
+{
+  "algorithm": "HAM10000-lesion-split-v1",
+  "seed": 42,
+  "group_field": "lesion_id",
+  "stratify_field": "dx",
+  "team_alignment_status": "A first proposal; ratio, seed and label mapping not yet confirmed with B",
+  "target_ratios_by_lesion": {
+    "train": 0.7,
+    "val": 0.15,
+    "test": 0.15
+  },
+  "global_target_lesions": {
+    "train": 5229,
+    "val": 1121,
+    "test": 1120
+  },
+  "per_class_lesion_quotas": {
+    "akiec": {
+      "train": 160,
+      "val": 34,
+      "test": 34
+    },
+    "bcc": {
+      "train": 229,
+      "val": 49,
+      "test": 49
+    },
+    "bkl": {
+      "train": 509,
+      "val": 109,
+      "test": 109
+    },
+    "df": {
+      "train": 51,
+      "val": 11,
+      "test": 11
+    },
+    "mel": {
+      "train": 430,
+      "val": 92,
+      "test": 92
+    },
+    "nv": {
+      "train": 3782,
+      "val": 811,
+      "test": 810
+    },
+    "vasc": {
+      "train": 68,
+      "val": 15,
+      "test": 15
+    }
+  },
+  "class_order": [
+    "akiec",
+    "bcc",
+    "bkl",
+    "df",
+    "mel",
+    "nv",
+    "vasc"
+  ],
+  "label_mapping": {
+    "akiec": 0,
+    "bcc": 1,
+    "bkl": 2,
+    "df": 3,
+    "mel": 4,
+    "nv": 5,
+    "vasc": 6
+  },
+  "allocation": "Hamilton train quotas, then Hamilton validation quotas from held-out lesions; lexical tie breaks",
+  "ordering": "Sort each class by SHA256(algorithm|seed|dx|lesion_id), then lesion_id; assign train, val, test sequentially",
+  "relative_path_root": "Final_Project_A",
+  "original_samples_retained": true,
+  "preprocessing_fitted": false,
+  "input_sha256": {
+    "HAM10000_metadata.csv": "de17ec44cb25ea9c3f6378ba18d69224c740afd62e86ec2edc6a894d6aa663d3",
+    "image_manifest.csv": "f97b5a4459c0a23542fc19403b316e04acfdbdcd32b758528af2469b5a075843",
+    "split_data.py": "0bc39b3f7cc2b2838cf89e2b007012d52c1a3247443500e8263fd2b827f7f4d0"
+  }
+}

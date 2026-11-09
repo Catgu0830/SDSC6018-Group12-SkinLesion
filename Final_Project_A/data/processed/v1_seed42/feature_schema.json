@@ -1,0 +1,97 @@
+{
+  "feature_order": [
+    "age_z",
+    "sex__female",
+    "sex__male",
+    "sex__unknown",
+    "localization__abdomen",
+    "localization__acral",
+    "localization__back",
+    "localization__chest",
+    "localization__ear",
+    "localization__face",
+    "localization__foot",
+    "localization__genital",
+    "localization__hand",
+    "localization__lower_extremity",
+    "localization__neck",
+    "localization__scalp",
+    "localization__trunk",
+    "localization__unknown",
+    "localization__upper_extremity"
+  ],
+  "n_features": 19,
+  "feature_modes": {
+    "all_metadata": [
+      "age_z",
+      "sex__female",
+      "sex__male",
+      "sex__unknown",
+      "localization__abdomen",
+      "localization__acral",
+      "localization__back",
+      "localization__chest",
+      "localization__ear",
+      "localization__face",
+      "localization__foot",
+      "localization__genital",
+      "localization__hand",
+      "localization__lower_extremity",
+      "localization__neck",
+      "localization__scalp",
+      "localization__trunk",
+      "localization__unknown",
+      "localization__upper_extremity"
+    ],
+    "age_only": [
+      "age_z"
+    ],
+    "localization_only": [
+      "localization__abdomen",
+      "localization__acral",
+      "localization__back",
+      "localization__chest",
+      "localization__ear",
+      "localization__face",
+      "localization__foot",
+      "localization__genital",
+      "localization__hand",
+      "localization__lower_extremity",
+      "localization__neck",
+      "localization__scalp",
+      "localization__trunk",
+      "localization__unknown",
+      "localization__upper_extremity"
+    ],
+    "image_only": []
+  },
+  "audit_only_added_columns": [
+    "age_missing",
+    "age_imputed"
+  ],
+  "retained_original_columns": [
+    "lesion_id",
+    "image_id",
+    "dx",
+    "dx_type",
+    "age",
+    "sex",
+    "localization",
+    "dataset",
+    "label",
+    "split",
+    "relative_path",
+    "image_sha256"
+  ],
+  "label_mapping": {
+    "akiec": 0,
+    "bcc": 1,
+    "bkl": 2,
+    "df": 3,
+    "mel": 4,
+    "nv": 5,
+    "vasc": 6
+  },
+  "model_input_policy": "Use only explicitly listed features; do not use all numeric CSV columns",
+  "relative_path_root": "Final_Project_A"
+}

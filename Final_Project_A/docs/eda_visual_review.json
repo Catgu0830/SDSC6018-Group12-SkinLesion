@@ -1,0 +1,38 @@
+{
+  "reviewed_at": "2026-11-09T18:53:30.617033+08:00",
+  "reviewer": "assistant; visual inspection through view_image, not student approval",
+  "scope": "All six regenerated PNG figures; titles, units, labels, annotations, legends and footers",
+  "figures": [
+    {
+      "name": "01_class_distribution",
+      "png_sha256": "2d24b73420f3133efdb2286754fce110fbac069d1b1ee36974d88c487a53045e",
+      "result": "passed; readable with no observed clipping or overlap"
+    },
+    {
+      "name": "02_age_distribution",
+      "png_sha256": "448a41e9b34b63c0204a51b4d3bdde249da634577ca452f2a1c3a6874c634f72",
+      "result": "passed; readable with no observed clipping or overlap"
+    },
+    {
+      "name": "03_sex_and_location",
+      "png_sha256": "fbec0399e29f377ed5e8bcbe33844bc4cb4a88dc31d0ec54302a9a50a71ba875",
+      "result": "passed; readable with no observed clipping or overlap"
+    },
+    {
+      "name": "04_missingness",
+      "png_sha256": "681112c59a4f1f47fd99cf66ae511c6b314c8596b93a9fad4b2e54d2520954aa",
+      "result": "passed; readable with no observed clipping or overlap"
+    },
+    {
+      "name": "05_multiplicity_and_provenance",
+      "png_sha256": "ff551ce0bc7c16be73dd319011aeec5aa9319615bda906131dbf13d1ad24a406",
+      "result": "passed; readable with no observed clipping or overlap"
+    },
+    {
+      "name": "06_split_class_composition",
+      "png_sha256": "caa586a8c530ac8cb4c393fbbcc879dee1fa3063afdf708b8b1e2bfa14b1d16c",
+      "result": "passed; readable with no observed clipping or overlap"
+    }
+  ],
+  "statistical_scope_note": "Distinct lesion IDs do not establish independent patients. No causal, fairness or model-performance claims."
+}
