@@ -1,0 +1,33 @@
+{
+  "generated_at": "2026-11-09T18:50:58.760645+08:00",
+  "fit_split": "train",
+  "fit_n_rows": 7050,
+  "n_features": 19,
+  "age_parameters": {
+    "imputation": "observed training median",
+    "median": 50.0,
+    "mean_after_imputation": 51.754609929078015,
+    "population_std_after_imputation": 16.914031588126964,
+    "observed_n": 7010,
+    "missing_n": 40,
+    "age_missing_is_model_feature": false
+  },
+  "split_rows": {
+    "train": 7050,
+    "val": 1474,
+    "test": 1491
+  },
+  "age_missing": {
+    "train": 40,
+    "val": 10,
+    "test": 7
+  },
+  "feature_mode_dimensions": {
+    "all_metadata": 19,
+    "age_only": 1,
+    "localization_only": 15,
+    "image_only": 0
+  },
+  "images_processed_lazily": true,
+  "model_training_performed": false
+}

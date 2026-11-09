@@ -1,0 +1,134 @@
+{
+  "analysis_scope": "Training EDA; held-out sets used only for basic sample/class counts. No model results or fairness conclusions.",
+  "train_image_n": 7050,
+  "train_lesion_n": 5229,
+  "class_counts": {
+    "akiec": {
+      "image_n": 230,
+      "lesion_n": 160,
+      "image_pct": 3.2624113475177303,
+      "lesion_pct": 3.0598584815452283
+    },
+    "bcc": {
+      "image_n": 365,
+      "lesion_n": 229,
+      "image_pct": 5.177304964539007,
+      "lesion_pct": 4.3794224517116085
+    },
+    "bkl": {
+      "image_n": 762,
+      "lesion_n": 509,
+      "image_pct": 10.808510638297872,
+      "lesion_pct": 9.734174794415758
+    },
+    "df": {
+      "image_n": 86,
+      "lesion_n": 51,
+      "image_pct": 1.2198581560283688,
+      "lesion_pct": 0.9753298909925416
+    },
+    "mel": {
+      "image_n": 788,
+      "lesion_n": 430,
+      "image_pct": 11.177304964539008,
+      "lesion_pct": 8.2233696691528
+    },
+    "nv": {
+      "image_n": 4724,
+      "lesion_n": 3782,
+      "image_pct": 67.00709219858156,
+      "lesion_pct": 72.32740485752534
+    },
+    "vasc": {
+      "image_n": 95,
+      "lesion_n": 68,
+      "image_pct": 1.3475177304964538,
+      "lesion_pct": 1.300439854656722
+    }
+  },
+  "class_imbalance_image_max_min_ratio": 54.93023255813954,
+  "train_majority_class": "nv",
+  "train_majority_image_fraction": 0.6700709219858156,
+  "age_original_observed_n": 7010,
+  "age_original_missing_n": 40,
+  "age_original_observed_mean": 51.76462196861626,
+  "age_original_observed_median": 50.0,
+  "age_original_observed_q1": 40.0,
+  "age_original_observed_q3": 65.0,
+  "age_original_observed_min": 0.0,
+  "age_original_observed_max": 85.0,
+  "sex_counts": {
+    "male": 3789,
+    "female": 3218,
+    "unknown": 43
+  },
+  "location_counts": {
+    "back": 1552,
+    "lower extremity": 1469,
+    "trunk": 965,
+    "upper extremity": 821,
+    "abdomen": 731,
+    "face": 528,
+    "chest": 265,
+    "foot": 214,
+    "unknown": 166,
+    "neck": 102,
+    "scalp": 92,
+    "hand": 61,
+    "ear": 42,
+    "genital": 38,
+    "acral": 4
+  },
+  "missing_field_counts": {
+    "age_missing": 40,
+    "sex_unknown": 43,
+    "localization_unknown": 166
+  },
+  "any_missing_or_unknown_image_n": 183,
+  "multiple_missing_or_unknown_image_n": 33,
+  "lesions_with_multiple_images": 1390,
+  "source_counts": {
+    "vidir_molemax": 2740,
+    "vidir_modern": 2408,
+    "rosendahl": 1583,
+    "vienna_dias": 319
+  },
+  "confirmation_counts": {
+    "histo": 3793,
+    "follow_up": 2562,
+    "consensus": 646,
+    "confocal": 49
+  },
+  "split_overview": [
+    {
+      "split": "train",
+      "image_n": 7050,
+      "lesion_n": 5229,
+      "image_pct_all": 70.39440838741888,
+      "lesion_pct_all": 70.0
+    },
+    {
+      "split": "val",
+      "image_n": 1474,
+      "lesion_n": 1121,
+      "image_pct_all": 14.71792311532701,
+      "lesion_pct_all": 15.006693440428382
+    },
+    {
+      "split": "test",
+      "image_n": 1491,
+      "lesion_n": 1120,
+      "image_pct_all": 14.88766849725412,
+      "lesion_pct_all": 14.99330655957162
+    }
+  ],
+  "figures": [
+    "01_class_distribution",
+    "02_age_distribution",
+    "03_sex_and_location",
+    "04_missingness",
+    "05_multiplicity_and_provenance",
+    "06_split_class_composition"
+  ],
+  "model_training_performed": false
+}

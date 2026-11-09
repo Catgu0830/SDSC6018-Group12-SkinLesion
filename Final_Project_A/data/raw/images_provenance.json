@@ -1,0 +1,28 @@
+{
+  "doi": "10.7910/DVN/DBW86T",
+  "dataset_version": "4.0",
+  "official_record": "harvard_dataset_record_v4.json",
+  "archives": [
+    {
+      "file": "HAM10000_images_part_1.zip",
+      "official_file_id": 3172585,
+      "download_url": "https://dataverse.harvard.edu/api/access/datafile/3172585",
+      "bytes": 1366522108,
+      "expected_md5": "4639bfa73ab251610530a97c898e6e46",
+      "actual_md5": "4639bfa73ab251610530a97c898e6e46",
+      "verified_at": "2026-11-09T18:50:36.478606+08:00"
+    },
+    {
+      "file": "HAM10000_images_part_2.zip",
+      "official_file_id": 3172584,
+      "download_url": "https://dataverse.harvard.edu/api/access/datafile/3172584",
+      "bytes": 1403566547,
+      "expected_md5": "da43d6cc50f6613013be07e8986b384b",
+      "actual_md5": "da43d6cc50f6613013be07e8986b384b",
+      "verified_at": "2026-11-09T18:50:38.619423+08:00"
+    }
+  ],
+  "metadata_md5": "8f85fb1aa29d80a2797247e434deb79d",
+  "usage_terms_record": "harvard_dataset_record_v4.json -> data.latestVersion.termsOfUse",
+  "original_jpeg_bytes_preserved": true
+}

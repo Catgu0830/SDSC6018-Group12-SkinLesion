@@ -1,0 +1,23 @@
+{
+  "retrieved_at": "2026-11-07T00:07:32.331108+08:00",
+  "doi": "10.7910/DVN/DBW86T",
+  "dataset_version": "4.0",
+  "dataset_release_time": "2023-02-07T10:10:46Z",
+  "record_url": "https://dataverse.harvard.edu/api/datasets/:persistentId/?persistentId=doi:10.7910/DVN/DBW86T",
+  "record_file": "harvard_dataset_record_v4.json",
+  "download_url": "https://dataverse.harvard.edu/api/access/datafile/4338392?format=original",
+  "official_file_id": 4338392,
+  "official_catalog_label": "HAM10000_metadata.tab",
+  "local_original_format_file": "HAM10000_metadata.csv",
+  "original_bytes": 690218,
+  "expected_md5": "8f85fb1aa29d80a2797247e434deb79d",
+  "actual_md5": "8f85fb1aa29d80a2797247e434deb79d",
+  "sha256": "de17ec44cb25ea9c3f6378ba18d69224c740afd62e86ec2edc6a894d6aa663d3",
+  "original_md5_verified": true,
+  "tab_export_file": "HAM10000_metadata.tab",
+  "tab_export_md5": "1d13fed99da9c3e925fb523df87d527e",
+  "checksum_note": "The catalog checksum matches the original CSV, not the default TAB export. Both were parsed and compared row by row, with identical values.",
+  "terms_of_use_record": "harvard_dataset_record_v4.json -> data.latestVersion.termsOfUse",
+  "usage_label_from_repository": "Creative Commons Attribution-NonCommercial 4.0 International Public License",
+  "images_downloaded": false
+}

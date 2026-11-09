@@ -1,0 +1,33 @@
+{
+  "independent_numeric_and_one_hot_checks": "passed",
+  "original_fields_and_missing_flags_preserved": "passed",
+  "fit_statistics_and_vocabulary_from_train_only": "passed",
+  "mixed_split_fit_rejected": "passed",
+  "unseen_category_fallback_without_refitting": "passed",
+  "all_6_output_files_byte_identical_on_reproduction": "passed",
+  "existing_version_overwrite_rejected": "passed",
+  "rgb_normalization_known_color_test": "passed",
+  "validation_test_seed_epoch_invariance": "passed",
+  "training_seed_epoch_reproducibility": "passed",
+  "different_training_epoch_changes_some_augmentations": "passed",
+  "feature_mode_dimensions": {
+    "all_metadata": 19,
+    "age_only": 1,
+    "localization_only": 15,
+    "image_only": 0
+  },
+  "all_image_inputs_validated": {
+    "train": 7050,
+    "val": 1474,
+    "test": 1491
+  },
+  "all_original_image_sha256_unchanged": true,
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "Pillow": "13.0.0"
+  },
+  "torchvision_pixel_equivalence_tested": false,
+  "model_training_performed": false
+}

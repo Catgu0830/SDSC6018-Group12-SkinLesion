@@ -1,0 +1,19 @@
+{
+  "independent_pandas_integrity_check": "passed",
+  "all_output_checksums_verified": "passed",
+  "source_script_and_input_hashes_verified": "passed",
+  "byte_identical_reproduction_of_all_8_files": "passed",
+  "existing_version_overwrite_rejected": "passed",
+  "assignment_independent_of_input_row_order": "passed",
+  "conflicting_within_lesion_labels_rejected": "passed",
+  "image_counts": {
+    "train": 7050,
+    "val": 1474,
+    "test": 1491
+  },
+  "lesion_counts": {
+    "train": 5229,
+    "val": 1121,
+    "test": 1120
+  }
+}

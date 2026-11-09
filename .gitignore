@@ -45,3 +45,11 @@ Thumbs.db
 .vscode/
 .idea/
 *.log
+
+# A-stage data preparation artifacts
+!/Final_Project_A/data/
+/Final_Project_A/data/raw/*
+!/Final_Project_A/data/raw/*.csv
+!/Final_Project_A/data/raw/*.tab
+!/Final_Project_A/data/raw/*.json
+/Final_Project_A/reviews/
