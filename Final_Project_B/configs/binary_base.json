@@ -1,0 +1,15 @@
+{
+  "inherit": "common.json",
+  "run": {
+    "name": "binary_base",
+    "description": "Binary malignant/benign, frozen lesion-level split v1_seed42, ResNet-50, plain augmentation. Reference for the tuned binary model."
+  },
+  "data": {
+    "metadata_mode": "image_only",
+    "label_mode": "binary"
+  },
+  "model": {
+    "kind": "image_only",
+    "dropout": 0.0
+  }
+}

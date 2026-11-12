@@ -1,0 +1,40 @@
+{
+  "inherit": "common.json",
+  "run": {
+    "name": "paper_repro_oversampled",
+    "description": "CONTROL / literature reproduction: RandomOverSampler before a random 75/15/10 split, binary malignant-benign task, sequential depthwise-separable CNN at 28px. Follows Abdullah et al., Diagnostics 2024 (96.25%). 85.5% of test rows are byte-identical copies of a training file."
+  },
+  "data": {
+    "metadata_mode": "image_only",
+    "split_dir": "data/control_splits/image_level_oversampled_seed42",
+    "label_mode": "binary",
+    "image_size": 28,
+    "resize_to": 32,
+    "batch_size": 128,
+    "num_workers": 4,
+    "aug": {
+      "flip": 0.5,
+      "quarter_turn": true
+    }
+  },
+  "model": {
+    "kind": "seqcnn",
+    "pretrained": false,
+    "width": 32,
+    "dropout": 0.4
+  },
+  "train": {
+    "epochs": 40,
+    "lr": 0.001,
+    "backbone_lr_mult": 1.0,
+    "weight_decay": 0.0001,
+    "patience": 8,
+    "amp": true,
+    "seed": 42,
+    "max_batches": null,
+    "loss": {
+      "class_weights": "none",
+      "label_smoothing": 0.0
+    }
+  }
+}

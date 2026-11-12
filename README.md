@@ -111,32 +111,40 @@ and localization distributions across those sets, and compute the metrics above 
 demographic subgroup. Because Benefit and Harm can be small, subgroup claims are reported with
 bootstrap confidence intervals and interpreted as correlational patterns, not causal effects.
 
-## 5. Planned repository layout
+## 5. Repository layout
 
 ```text
 ├── README.md
-├── requirements.txt          # environment (to be added)
-├── proposal/                 # submitted proposal (5% deliverable)
-├── src/
-│   ├── split.py              # lesion-level stratified split -> csv contract
-│   ├── data.py               # dataset / transforms / metadata encoding
-│   ├── models.py             # ResNet-50 baseline + two-stream fusion
-│   ├── train.py              # training + ablation runner
-│   ├── predict.py            # export per-sample test predictions
-│   └── analyse.py            # Benefit/Neutral/Harm partition + subgroup stats + figures
-├── results/                  # metrics tables and figures (code output)
-└── report/                   # final report (20%) and slides (10%)
+├── dataverse_files/            # HAM10000 metadata + small reference tables (images/archives not committed)
+├── 小组计划书/                  # submitted proposal and course hand-outs
+├── Final_Project_A/            # stage A: audits, frozen lesion-level split, preprocessing, EDA
+│   ├── data/splits/v1_seed42/      # frozen train/val/test lists (the shared contract)
+│   ├── data/processed/v1_seed42/   # 19 metadata features fitted on training records only
+│   ├── scripts/                    # audit / split / preprocess / EDA / validation
+│   └── docs/                       # method, results and validation records
+└── Final_Project_B/            # stage B: modelling (this contribution)
+    ├── configs/                    # one JSON per experiment, sharing common.json
+    ├── scripts/                    # data, models, training loop, evaluation, robustness, audit
+    ├── outputs/                    # run artefacts (git-ignored; regenerate with the commands below)
+    └── results.md                  # every headline number with its caveats
 ```
+
+Run artefacts (checkpoints, per-sample predictions, per-run figures) are deliberately
+**not committed**: they are large and fully regenerable. Only the small summary tables
+(`outputs/deliverables_headline.csv`, `seeds_*.csv`, `ensemble_test.csv`,
+`metrics_report.md`) and the ensemble confusion matrices are tracked so a reader can see
+the results without training anything.
 
 ## 6. Status
 
 - [x] Research question, prior work, dataset, method, timeline (proposal submitted)
 - [x] Dataset downloaded and metadata verified (10,015 images / 7,470 lesions)
-- [ ] Lesion-level stratified split
-- [ ] Image-only baseline trained
-- [ ] Multimodal fusion model trained
-- [ ] Ablations (age only, localization only)
-- [ ] Benefit / Neutral / Harm partition and subgroup analysis
+- [x] Lesion-level stratified split (stage A, `v1_seed42`, zero lesion/image overlap)
+- [x] Image-only baseline trained (3 seeds + ensemble)
+- [x] Multimodal fusion model trained (3 seeds + ensemble)
+- [x] Ablations: age only, localization only (3 seeds each)
+- [x] Seed-robustness analysis (mean +- std, paired deltas vs baseline)
+- [ ] Benefit / Neutral / Harm partition and subgroup analysis (stage C)
 - [ ] Final report, presentation, individual reflections
 
 ## 7. References

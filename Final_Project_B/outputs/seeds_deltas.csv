@@ -1,0 +1,10 @@
+experiment,metric,n_seeds,delta_mean,delta_std
+fusion_age_only,test_accuracy,3,0.0007,0.0024
+fusion_age_only,test_macro_f1,3,0.0192,0.0026
+fusion_age_only,test_auc_ovr_macro,3,0.0085,0.0064
+fusion_all_metadata,test_accuracy,3,0.0058,0.0051
+fusion_all_metadata,test_macro_f1,3,0.0383,0.0103
+fusion_all_metadata,test_auc_ovr_macro,3,0.0158,0.0057
+fusion_localization_only,test_accuracy,3,0.0013,0.0058
+fusion_localization_only,test_macro_f1,3,0.0315,0.0218
+fusion_localization_only,test_auc_ovr_macro,3,0.0153,0.0056

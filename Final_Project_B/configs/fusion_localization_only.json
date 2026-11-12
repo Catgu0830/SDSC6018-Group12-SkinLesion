@@ -1,0 +1,13 @@
+{
+  "inherit": "common.json",
+  "run": {
+    "name": "fusion_localization_only",
+    "description": "Two-stream fusion with lesion localization only (proposal ablation 4)."
+  },
+  "data": {
+    "metadata_mode": "localization_only"
+  },
+  "model": {
+    "kind": "fusion"
+  }
+}

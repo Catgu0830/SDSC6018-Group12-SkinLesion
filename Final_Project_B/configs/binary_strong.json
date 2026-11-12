@@ -1,0 +1,30 @@
+{
+  "inherit": "common.json",
+  "run": {
+    "name": "binary_strong",
+    "description": "Binary malignant/benign, frozen lesion-level split v1_seed42, ResNet-50 with stronger augmentation, label smoothing and longer schedule. All hyperparameters selected on the validation split only."
+  },
+  "data": {
+    "metadata_mode": "image_only",
+    "label_mode": "binary",
+    "aug": {
+      "flip": 0.5,
+      "quarter_turn": true,
+      "rrc_scale": [0.8, 1.0],
+      "color_jitter": 0.2,
+      "erasing": 0.1
+    }
+  },
+  "model": {
+    "kind": "image_only",
+    "dropout": 0.0
+  },
+  "train": {
+    "epochs": 25,
+    "patience": 7,
+    "loss": {
+      "class_weights": "none",
+      "label_smoothing": 0.05
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "inherit": "common.json",
+  "run": {
+    "name": "baseline_image",
+    "description": "Image-only ResNet-50 baseline (proposal ablation 1). No metadata stream."
+  },
+  "data": {
+    "metadata_mode": "image_only"
+  },
+  "model": {
+    "kind": "image_only",
+    "dropout": 0.0
+  }
+}

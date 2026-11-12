@@ -1,0 +1,16 @@
+{
+  "inherit": "common.json",
+  "run": {
+    "name": "control_binary_image_level",
+    "description": "CONTROL ONLY: binary malignant/benign task on the leaky image-level split, matching the protocol reported by several 96%+ HAM10000 papers."
+  },
+  "data": {
+    "metadata_mode": "image_only",
+    "split_dir": "data/control_splits/image_level_seed42",
+    "label_mode": "binary"
+  },
+  "model": {
+    "kind": "image_only",
+    "dropout": 0.0
+  }
+}

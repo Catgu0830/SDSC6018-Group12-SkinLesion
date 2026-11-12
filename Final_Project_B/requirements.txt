@@ -1,0 +1,13 @@
+# Tested with the conda environment used for development (Python 3.12, CUDA 11.8):
+#   torch 2.7.1+cu118, torchvision 0.22.1+cu118, numpy 2.3.5, pandas 2.2.3,
+#   scikit-learn 1.8.0, Pillow 13.0.0, matplotlib 3.10.8
+#
+# The CUDA build of torch must come from the PyTorch index, for example:
+#   pip install torch==2.7.1 torchvision==0.22.1 --index-url https://download.pytorch.org/whl/cu118
+torch>=2.4
+torchvision>=0.19
+numpy>=1.24
+pandas>=2.0
+scikit-learn>=1.3
+Pillow>=10
+matplotlib>=3.7

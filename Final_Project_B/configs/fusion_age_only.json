@@ -1,0 +1,13 @@
+{
+  "inherit": "common.json",
+  "run": {
+    "name": "fusion_age_only",
+    "description": "Two-stream fusion with age only (proposal ablation 3)."
+  },
+  "data": {
+    "metadata_mode": "age_only"
+  },
+  "model": {
+    "kind": "fusion"
+  }
+}

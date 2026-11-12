@@ -1,0 +1,41 @@
+﻿{
+    "run":  {
+                "name":  null
+            },
+    "data":  {
+                 "metadata_mode":  "all_metadata",
+                 "split_version":  "v1_seed42",
+                 "image_size":  224,
+                 "resize_to":  232,
+                 "batch_size":  64,
+                 "num_workers":  4,
+                 "pin_memory":  true
+             },
+    "model":  {
+                  "kind":  "fusion",
+                  "pretrained":  true,
+                  "backbone":  "resnet50_imagenet1k_v2",
+                  "dropout":  0.3,
+                  "meta_hidden":  [
+                                      64,
+                                      128
+                                  ],
+                  "meta_dropout":  0.2,
+                  "image_dropout":  0.2,
+                  "fusion_dim":  256
+              },
+    "train":  {
+                  "epochs":  20,
+                  "lr":  0.0003,
+                  "backbone_lr_mult":  0.1,
+                  "weight_decay":  0.0001,
+                  "patience":  6,
+                  "amp":  true,
+                  "seed":  42,
+                  "max_batches":  null,
+                  "loss":  {
+                               "class_weights":  "none",
+                               "label_smoothing":  0.0
+                           }
+              }
+}
