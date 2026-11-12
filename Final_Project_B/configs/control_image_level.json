@@ -1,0 +1,15 @@
+{
+  "inherit": "common.json",
+  "run": {
+    "name": "control_image_level",
+    "description": "CONTROL ONLY: image-level random split reproducing the common HAM10000 literature protocol. Images of one lesion cross partitions. Never report as our result."
+  },
+  "data": {
+    "metadata_mode": "image_only",
+    "split_dir": "data/control_splits/image_level_seed42"
+  },
+  "model": {
+    "kind": "image_only",
+    "dropout": 0.0
+  }
+}
