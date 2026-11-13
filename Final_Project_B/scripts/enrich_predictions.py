@@ -70,10 +70,12 @@ def main(argv=None) -> int:
     parser = argparse.ArgumentParser(description=__doc__,
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--out", default=None,
-                        help="output directory (default: outputs/enriched_predictions)")
+                        help="output directory (default: Final_Project_B/predictions)")
     args = parser.parse_args(argv)
 
-    out_dir = Path(args.out) if args.out else config.OUTPUTS_DIR / "enriched_predictions"
+    # Tracked location on purpose: these tables are the shipped hand-off to stage C,
+    # so they belong in the repository rather than in the git-ignored outputs/.
+    out_dir = Path(args.out) if args.out else config.B_DIR / "predictions"
     out_dir.mkdir(parents=True, exist_ok=True)
 
     meta = load_metadata()

@@ -125,15 +125,16 @@ bootstrap confidence intervals and interpreted as correlational patterns, not ca
 └── Final_Project_B/            # stage B: modelling (this contribution)
     ├── configs/                    # one JSON per experiment, sharing common.json
     ├── scripts/                    # data, models, training loop, evaluation, robustness, audit
-    ├── outputs/                    # run artefacts (git-ignored; regenerate with the commands below)
+    ├── predictions/                # shipped per-sample prediction tables for stage C (tracked)
+    ├── outputs/                    # other run artefacts (git-ignored; regenerate with the commands below)
     └── results.md                  # every headline number with its caveats
 ```
 
-Run artefacts (checkpoints, per-sample predictions, per-run figures) are deliberately
-**not committed**: they are large and fully regenerable. Only the small summary tables
-(`outputs/deliverables_headline.csv`, `seeds_*.csv`, `ensemble_test.csv`,
-`metrics_report.md`) and the ensemble confusion matrices are tracked so a reader can see
-the results without training anything.
+Checkpoints, per-run figures and per-run logs are deliberately **not committed**: they are
+large and fully regenerable. The small result tables (`outputs/deliverables_headline.csv`,
+`seeds_*.csv`, `ensemble_test.csv`, `metrics_report.md`), the four ensemble confusion
+matrices, and the **per-sample prediction tables in `Final_Project_B/predictions/`** are
+tracked, so a reader can inspect the results and the stage-C hand-off without training anything.
 
 ## 6. Status
 

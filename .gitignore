@@ -39,6 +39,10 @@ lightning_logs/
 *.ckpt
 *.onnx
 
+# ...except the small, shipped per-sample prediction tables for stage C
+!Final_Project_B/predictions/
+!Final_Project_B/predictions/*.csv
+
 # ---- OS / editor ----------------------------------------------------------
 .DS_Store
 Thumbs.db
