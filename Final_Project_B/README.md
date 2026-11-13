@@ -139,6 +139,12 @@ Joining the baseline and fusion tables on `image_id` yields exactly the
 Benefit (baseline wrong, fusion right) / Harm (baseline right, fusion wrong) /
 Neutral partition.
 
+`scripts/enrich_predictions.py` merges the subgroup variables into those tables
+(age, sex, lesion location, diagnosis-confirmation method, source site, age bands,
+`lesion_image_count`, `is_malignant`) so the analysis stage never has to join a
+second file by hand. Missing values are preserved rather than imputed, and are
+also exposed as an `age_missing` flag plus an `unknown` age-band level.
+
 ## Status
 
 - [x] Environment verified: CUDA available, torch 2.7.1+cu118 on an RTX 3060
