@@ -145,6 +145,10 @@ Neutral partition.
 second file by hand. Missing values are preserved rather than imputed, and are
 also exposed as an `age_missing` flag plus an `unknown` age-band level.
 
+The enriched tables are **committed** under `Final_Project_B/predictions/`
+(18 files, ~5 MB) because they are the actual hand-off to stage C - unlike the
+checkpoints and per-run figures, which stay in the git-ignored `outputs/`.
+
 ## Status
 
 - [x] Environment verified: CUDA available, torch 2.7.1+cu118 on an RTX 3060

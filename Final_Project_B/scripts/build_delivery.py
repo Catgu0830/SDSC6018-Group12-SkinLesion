@@ -114,13 +114,16 @@ def main(argv=None) -> int:
         copy(config.OUTPUTS_DIR / name, table_dir, log, "table")
 
     # ---- 02 predictions ----------------------------------------------------
-    # Prefer the enriched tables (grouping variables merged in) so stage C does not
-    # have to join anything by hand. Fall back to the raw export with a warning.
+    # The enriched tables live in the tracked `predictions/` directory; fall back to
+    # the older working copy under outputs/ and, last, to the raw export.
+    tracked = config.B_DIR / "predictions"
     enriched = config.OUTPUTS_DIR / "enriched_predictions"
     for run, tag in PREDICTION_SOURCES:
         for split in ("test", "val"):
             name = f"{tag}__{run}__{split}.csv"
-            src = enriched / name
+            src = tracked / name
+            if not src.exists():
+                src = enriched / name
             if not src.exists():
                 src = config.OUTPUTS_DIR / run / f"predictions_{split}.csv"
                 log.append(f"NOTE     enriched table missing for {name}; copied the raw export")
@@ -132,7 +135,9 @@ def main(argv=None) -> int:
             log.append(f"OK       {target}")
 
     for split in ("test", "val"):
-        src = enriched / f"subgroups_{split}.csv"
+        src = tracked / f"subgroups_{split}.csv"
+        if not src.exists():
+            src = enriched / f"subgroups_{split}.csv"
         if src.exists():
             shutil.copy2(src, pred_dir / src.name)
             log.append(f"OK       {pred_dir / src.name}")
