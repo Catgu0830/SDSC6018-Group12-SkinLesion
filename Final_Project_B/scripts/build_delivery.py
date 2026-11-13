@@ -80,7 +80,9 @@ def make_history_png(run: str, dst_dir: Path) -> Path | None:
 
 
 def main(argv=None) -> int:
-    default_out = config.REPO_ROOT.parent / f"6018_Group12_B阶段交付_{date.today():%Y%m%d}"
+    # A fixed directory name on purpose: keying it on the build date silently
+    # created a second package on the next day's rebuild, splitting the delivery.
+    default_out = config.REPO_ROOT.parent / "6018_Group12_B阶段交付"
     parser = argparse.ArgumentParser(description=__doc__,
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--out", default=str(default_out))
@@ -112,15 +114,28 @@ def main(argv=None) -> int:
         copy(config.OUTPUTS_DIR / name, table_dir, log, "table")
 
     # ---- 02 predictions ----------------------------------------------------
+    # Prefer the enriched tables (grouping variables merged in) so stage C does not
+    # have to join anything by hand. Fall back to the raw export with a warning.
+    enriched = config.OUTPUTS_DIR / "enriched_predictions"
     for run, tag in PREDICTION_SOURCES:
         for split in ("test", "val"):
-            src = config.OUTPUTS_DIR / run / f"predictions_{split}.csv"
+            name = f"{tag}__{run}__{split}.csv"
+            src = enriched / name
+            if not src.exists():
+                src = config.OUTPUTS_DIR / run / f"predictions_{split}.csv"
+                log.append(f"NOTE     enriched table missing for {name}; copied the raw export")
             if not src.exists():
                 log.append(f"MISSING  {src}")
                 continue
-            target = pred_dir / f"{tag}__{run}__{split}.csv"
+            target = pred_dir / name
             shutil.copy2(src, target)
             log.append(f"OK       {target}")
+
+    for split in ("test", "val"):
+        src = enriched / f"subgroups_{split}.csv"
+        if src.exists():
+            shutil.copy2(src, pred_dir / src.name)
+            log.append(f"OK       {pred_dir / src.name}")
 
     # ---- 03 figures --------------------------------------------------------
     for experiment in EXPERIMENTS:
@@ -140,7 +155,7 @@ def main(argv=None) -> int:
             shutil.copytree(source, code_dir / name, dirs_exist_ok=True,
                             ignore=shutil.ignore_patterns("__pycache__"))
             log.append(f"OK       {code_dir / name}")
-    for name in ("requirements.txt", "README.md"):
+    for name in ("requirements.txt", "README.md", "RUNNING.md"):
         copy(config.B_DIR / name, code_dir, log, "doc")
 
     # ---- 05 audit ----------------------------------------------------------
